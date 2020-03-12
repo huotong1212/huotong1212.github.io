@@ -90,19 +90,17 @@
 
 
 
-<meta name="description" content="@TOC 描述符描述符的定义  描述符的作用是用来代理另外一个类的属性的 (必须把描述符定义成这个类的类属性，不能定义到构造函数中)  前面的铺垫-各个优先级 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;linhaifeng&#x2F;articles&#x2F;6204014.html#sr-toc-10关于数据描述符和非数据描述以及他们和类属性实例属性之间的优先级请看上面的博文链接，这里不会赘述太多。这里只会">
+<meta name="description" content="描述符描述符的定义  描述符的作用是用来代理另外一个类的属性的 (必须把描述符定义成这个类的类属性，不能定义到构造函数中)  前面的铺垫-各个优先级 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;linhaifeng&#x2F;articles&#x2F;6204014.html#sr-toc-10关于数据描述符和非数据描述以及他们和类属性实例属性之间的优先级请看上面的博文链接，这里不会赘述太多。这里只会分享一下我">
 <meta property="og:type" content="article">
 <meta property="og:title" content="descriptor">
 <meta property="og:url" content="http://yoursite.com/2020/03/12/descriptor/index.html">
 <meta property="og:site_name" content="Hexo Tong">
-<meta property="og:description" content="@TOC 描述符描述符的定义  描述符的作用是用来代理另外一个类的属性的 (必须把描述符定义成这个类的类属性，不能定义到构造函数中)  前面的铺垫-各个优先级 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;linhaifeng&#x2F;articles&#x2F;6204014.html#sr-toc-10关于数据描述符和非数据描述以及他们和类属性实例属性之间的优先级请看上面的博文链接，这里不会赘述太多。这里只会">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019061215491670.png">
+<meta property="og:description" content="描述符描述符的定义  描述符的作用是用来代理另外一个类的属性的 (必须把描述符定义成这个类的类属性，不能定义到构造函数中)  前面的铺垫-各个优先级 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;linhaifeng&#x2F;articles&#x2F;6204014.html#sr-toc-10关于数据描述符和非数据描述以及他们和类属性实例属性之间的优先级请看上面的博文链接，这里不会赘述太多。这里只会分享一下我">
 <meta property="article:published_time" content="2020-03-12T09:09:47.000Z">
-<meta property="article:modified_time" content="2020-03-12T09:11:51.990Z">
+<meta property="article:modified_time" content="2020-03-12T10:16:08.241Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019061215491670.png">
 
 
 
@@ -428,7 +426,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4.9k
+                  4.8k
                 </span>
               
 
@@ -465,8 +463,7 @@
       
 
       
-        <p>@<a href="个人吐血整理，完全弄懂描述符">TOC</a></p>
-<h2 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h2><h3 id="描述符的定义"><a href="#描述符的定义" class="headerlink" title="描述符的定义"></a>描述符的定义</h3><blockquote>
+        <h2 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h2><h3 id="描述符的定义"><a href="#描述符的定义" class="headerlink" title="描述符的定义"></a>描述符的定义</h3><blockquote>
 <p> 描述符的作用是用来代理另外一个类的属性的 (必须把描述符定义成这个类的类属性，不能定义到构造函数中)</p>
 </blockquote>
 <h3 id="前面的铺垫-各个优先级"><a href="#前面的铺垫-各个优先级" class="headerlink" title="前面的铺垫-各个优先级"></a>前面的铺垫-各个优先级</h3><blockquote>
@@ -601,7 +598,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myclassmethod</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,func)</span>:</span></span><br><span class="line">        self.func = func</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__get__</span><span class="params">(self, instance, owner)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">            result = self.func(owner,*args,**kwargs)</span><br><span class="line">            <span class="keyword">return</span> result</span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__set__</span><span class="params">(self, instance, value)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">mystaticmethod</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,func)</span>:</span></span><br><span class="line">        self.func = func</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__get__</span><span class="params">(self, instance, owner)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(*args,**kwargs)</span>:</span></span><br><span class="line">            result = self.func(*args,**kwargs)</span><br><span class="line">            <span class="keyword">return</span> result</span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__set__</span><span class="params">(self, instance, value)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span></span><br><span class="line">    job = <span class="string">'cooker'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age,salary)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.salary = salary</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">achievejob</span><span class="params">(cls,name)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> name+cls.job</span><br><span class="line"></span><br><span class="line"><span class="meta">    @myclassmethod  # obtainjob = myclassmethod(obtainjob)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">obtainjob</span><span class="params">(cls,name)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> name+cls.job</span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gainAdress</span><span class="params">(city)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'live in'</span>+city</span><br><span class="line"></span><br><span class="line"><span class="meta">    @mystaticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getAdress</span><span class="params">(city)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'live in'</span>+city</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p1 = People(<span class="string">'李白'</span>,<span class="number">20</span>,<span class="number">66666.66</span>)</span><br><span class="line">print(p1.achievejob(<span class="string">'tom'</span>)) <span class="comment"># tomcooker</span></span><br><span class="line">print(People.achievejob(<span class="string">'tom'</span>)) <span class="comment"># tomcooker</span></span><br><span class="line"></span><br><span class="line">print(p1.obtainjob(<span class="string">'faker'</span>)) <span class="comment"># fakercooker</span></span><br><span class="line">print(People.obtainjob(<span class="string">'faker'</span>)) <span class="comment"># fakercooker</span></span><br><span class="line"></span><br><span class="line">print(p1.gainAdress(<span class="string">'成都'</span>)) <span class="comment"># live in成都</span></span><br><span class="line">print(People.gainAdress(<span class="string">'成都'</span>)) <span class="comment"># live in成都</span></span><br><span class="line"></span><br><span class="line">print(p1.getAdress(<span class="string">'常州'</span>)) <span class="comment"># live in常州</span></span><br><span class="line">print(People.getAdress(<span class="string">'常州'</span>)) <span class="comment"># live in常州</span></span><br></pre></td></tr></table></figure>
 
 <p>打完收工</p>
-<p>本篇是我研究了一天，吐血整理出来的，希望大家能不吝啬的点个赞，不是为了积分，只想收到来自您的鼓励和肯定，作为我日后继续发表优质文章的动力<del>~</del>0.0<img src="https://img-blog.csdnimg.cn/2019061215491670.png" alt="在这里插入图片描述"></p>
 
       
     </div>
@@ -905,7 +901,7 @@
   
   <span class="post-meta-item-text">Site words total count&#58;</span>
   
-  <span title="Site words total count">5k</span>
+  <span title="Site words total count">4.9k</span>
   
 </div>
 
@@ -932,7 +928,7 @@
 <!--<span class="post-meta-divider">|</span>-->
 <!--<div class="theme-info">-->
 <!--  <div class="powered-by"></div>-->
-<!--  <span class="post-count">博客全站共5k字</span>-->
+<!--  <span class="post-count">博客全站共4.9k字</span>-->
 <!--</div>-->
 
         
