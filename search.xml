@@ -9,6 +9,7 @@
 <h3 id="前面的铺垫-各个优先级"><a href="#前面的铺垫-各个优先级" class="headerlink" title="前面的铺垫-各个优先级"></a>前面的铺垫-各个优先级</h3><blockquote>
 <p><a href="https://www.cnblogs.com/linhaifeng/articles/6204014.html#sr-toc-10" target="_blank" rel="noopener">https://www.cnblogs.com/linhaifeng/articles/6204014.html#sr-toc-10</a><br>关于数据描述符和非数据描述以及他们和类属性实例属性之间的优先级请看上面的博文链接，这里不会赘述太多。这里只会分享一下我的心得和发现。</p>
 </blockquote>
+<a id="more"></a>
 <p>你只要知道这些：<br>在一般情况下，</p>
 <p>一 描述符本身应该定义成新式类, 被代理的类也应该是新式类</p>
 <p>二 必须把描述符定义成这个类的类属性，不能为定义到构造函数中</p>
